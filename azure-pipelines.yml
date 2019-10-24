@@ -23,7 +23,7 @@ steps:
     tasks: 'build'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(System.DefaultWorkingDirectory)'
+    SourceFolder: '$(System.DefaultWorkingDirectory)/build/libs/'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
