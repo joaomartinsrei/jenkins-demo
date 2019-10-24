@@ -19,7 +19,7 @@ steps:
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/TEST-*.xml' 
     tasks: 'build'
 - task: CopyFiles@2
   inputs:
@@ -29,6 +29,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: ''
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
