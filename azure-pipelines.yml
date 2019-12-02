@@ -21,9 +21,3 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml' 
     tasks: 'build'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'AzureContainerRegistry'
-    repository: 'Jenkins-Demo'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
