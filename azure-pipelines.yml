@@ -23,7 +23,7 @@ steps:
     tasks: 'build'
 - task: Docker@2
   inputs:
-    containerRegistry: 'AzureContainerRegistry'
+    containerRegistry: 'AzureContainerRegistryJR'
     repository: 'Jenkins-Demo'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
