@@ -21,8 +21,9 @@ steps:
     publishJUnitResults: false
     testResultsFiles: '**/TEST-*.xml' 
     tasks: 'build'
-- task: PublishBuildArtifacts@1
+- task: Docker@2
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    containerRegistry: 'AzureContainerRegistry'
+    repository: 'Jenkins-Demo'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
